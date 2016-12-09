@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Средства для ухода в Барбершоп «Бородинский»</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Шапка -->
   <header class="main-header">
-    <div class="container">
+    <div class="container clearfix">
       <nav class="main-navigation">
         <ul>
           <li><a href="#">Информация</a></li>
@@ -27,157 +28,158 @@
   <main class="container">
     <!-- Хлебные крошки -->
     <div class="current-page">
-      <h2 class="current-page-title">Средства для ухода</h2>
-      <ul class="current-page-crumbs">
+      <h1>Средства для ухода</h1>
+      <ul class="bread-crumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="shop.html">Магазин</a></li>
-        <li><a class="current-page-crumbs-active" href="#">Средства для ухода</a></li>
+        <li><a class="bread-crumbs-active" href="#">Средства для ухода</a></li>
       </ul>
     </div>
 
     <!-- Каталог товаров -->
-    <div class="container">
-      <!-- Сортировка товаров -->
-      <div class="sorting">
-        <b>Производители:</b>
-        <form class="sorting-form" action="#" method="get">
-          <div class="checkbox-area">
-            <label>
-              <input type="checkbox" name="producers" checked>
-              Baxter of California
-            </label>
-          </div>
-          <div class="checkbox-area">
-            <label>
-              <input type="checkbox" name="producers">
-              Mr Natty
-            </label>
-          </div>
-          <div class="checkbox-area">
-            <label>
-              <input type="checkbox" name="producers" checked>
-              Suavecito
-            </label>
-          </div>
-          <div class="checkbox-area">
-            <label>
-              <input type="checkbox" name="producers">
-              Malin+Goetz
-            </label>
-          </div>
-          <div class="checkbox-area">
-            <label>
-              <input type="checkbox" name="producers">
-              Murray's
-            </label>
-          </div>
-          <div class="checkbox-area">
-            <label>
-              <input type="checkbox" name="producers" checked>
-              American Crew
-            </label>
-          </div>
-          <b>Группы товаров:</b>
-          <div class="radio-area">
-            <label>
-              <input type="radio" name="product-groups">
-              Бритвенные<br>
-              Принадлежности
-            </label>
-          </div>
-          <div class="radio-area">
-            <label>
-              <input type="radio" name="product-groups" checked>
-              Средства для ухода
-            </label>
-          </div>
-          <div class="radio-area">
-            <label>
-              <input type="radio" name="product-groups">
-              Аксессуары
-            </label>
-          </div>
-          <button class="btn" type="submit">Показать</button>
-        </form>
-      </div>
+    <!-- Сортировка товаров -->
+    <div class="sorting">
+      <form class="sorting-form" action="#" method="get">
+        <fieldset>
+          <legend>Производители:</legend>
+          <label>
+            <input type="checkbox" name="producers" checked>
+            Baxter of California
+          </label>
+          <label>
+            <input type="checkbox" name="producers">
+            Mr Natty
+          </label>
+          <label>
+            <input type="checkbox" name="producers" checked>
+            Suavecito
+          </label>
+          <label>
+            <input type="checkbox" name="producers">
+            Malin+Goetz
+          </label>
+          <label>
+            <input type="checkbox" name="producers">
+            Murray's
+          </label>
+          <label>
+            <input type="checkbox" name="producers" checked>
+            American Crew
+          </label>
+        </fieldset>
 
-      <!-- Товары -->
-      <div class="goods">
-        <article class="goods-item">
-          <figure class="goods-item-photo">
-            <img src="#" alt="Набор для путешествий «Baxter of California»" width="180" height="120">
-            <figcaption>Набор для путешествий<br>«Baxter of California»</figcaption>
-          </figure>
-          <section class="product-price">
-            <span class="price">2 900 руб.</span>
-            <a class="btn" href="#">Купить</a>
-          </section>
-        </article>
+        <fieldset>
+          <legend>Группы товаров:</legend>
+          <label>
+            <input type="radio" name="product-groups" value="Бритвенные принадлежности">
+            Бритвенные<br>
+            Принадлежности
+          </label>
+          <label>
+            <input type="radio" name="product-groups" value="Средства для ухода" checked>
+            Средства для ухода
+          </label>
+          <label>
+            <input type="radio" name="product-groups" value="Аксессуары">
+            Аксессуары
+          </label>
+        </fieldset>
+        <button class="btn" type="submit">Показать</button>
+      </form>
+    </div>
 
-        <article class="goods-item">
-          <figure class="goods-item-photo">
-            <img src="#" alt="Увлажняющий кондиционер «Baxter of California»" width="180" height="120">
-            <figcaption>Увлажняющий кондиционер<br>«Baxter of California»</figcaption>
-          </figure>
-          <section class="good-price">
-            <span class="price">750 руб.</span>
-            <a class="btn" href="#">Купить</a>
-          </section>
-        </article>
+    <!-- Товары -->
+    <div class="goods">
+      <article class="goods-item">
+        <figure class="goods-item-photo">
+          <img src="#" alt="Набор для путешествий «Baxter of California»" width="180" height="120">
+          <a href="#">
+            <span class="category">Набор для путешествий</span><br>
+            <span class="title">«Baxter of California»</span>
+          </a>
+        </figure>
+        <section class="product-price">
+          <span class="price">2 900 руб.</span>
+          <a class="btn" href="#">Купить</a>
+        </section>
+      </article>
 
-        <article class="goods-item">
-          <figure class="goods-item-photo">
-            <img src="#" alt="Гель для волос «Suavecito»" width="180" height="120">
-            <figcaption>Гель для волос<br>«Baxter of California»</figcaption>
-          </figure>
-          <section class="product-price">
-            <span class="price">290 руб.</span>
-            <a class="btn" href="#">Купить</a>
-          </section>
-        </article>
+      <article class="goods-item">
+        <figure class="goods-item-photo">
+          <img src="#" alt="Увлажняющий кондиционер «Baxter of California»" width="180" height="120">
+          <a href="#">
+            <span class="category">Увлажняющий кондиционер</span><br>
+            <span class="title">«Baxter of California»</span>
+          </a>
+        </figure>
+        <section class="good-price">
+          <span class="price">750 руб.</span>
+          <a class="btn" href="#">Купить</a>
+        </section>
+      </article>
 
-        <article class="goods-item">
-          <figure class="goods-item-photo">
-            <img src="#" alt="Глина для укладки волос «American Crew»" width="180" height="120">
-            <figcaption>Глина для укладки волос<br>«American Crew»</figcaption>
-          </figure>
-          <section class="product-price">
-            <span class="price">500 руб.</span>
-            <a class="btn" href="#">Купить</a>
-          </section>
-        </article>
+      <article class="goods-item">
+        <figure class="goods-item-photo">
+          <img src="#" alt="Гель для волос «Suavecito»" width="180" height="120">
+          <a href="#">
+            <span class="category">Гель для волос</span><br>
+            <span class="title">«Baxter of California»</span>
+          </a>
+        </figure>
+        <section class="product-price">
+          <span class="price">290 руб.</span>
+          <a class="btn" href="#">Купить</a>
+        </section>
+      </article>
 
-        <article class="goods-item">
-          <figure class="goods-item-photo">
-            <img src="#" alt="гель для волос «American Crew»" width="180" height="120">
-            <figcaption>Гель для волос<br>«American Crew»</figcaption>
-          </figure>
-          <section class="product-price">
-            <span class="price">300 руб.</span>
-            <a class="btn" href="#">Купить</a>
-          </section>
-        </article>
+      <article class="goods-item">
+        <figure class="goods-item-photo">
+          <img src="#" alt="Глина для укладки волос «American Crew»" width="180" height="120">
+          <a href="#">
+            <span class="category">Глина для укладки волос</span><br>
+            <span class="title">«American Crew»</span>
+          </a>
+        </figure>
+        <section class="product-price">
+          <span class="price">500 руб.</span>
+          <a class="btn" href="#">Купить</a>
+        </section>
+      </article>
 
-        <article class="goods-item">
-          <figure class="goods-item-photo">
-            <img src="#" alt="Набор для бритья «Baxter of California»" width="180" height="120">
-            <figcaption>Набор для бритья<br>«Baxter of California»</figcaption>
-          </figure>
-          <section class="product-price">
-            <span class="price">3 900 руб.</span>
-            <a class="btn" href="#">Купить</a>
-          </section>
-        </article>
+      <article class="goods-item">
+        <figure class="goods-item-photo">
+          <img src="#" alt="гель для волос «American Crew»" width="180" height="120">
+          <a href="#">
+            <span class="category">Гель для волос</span><br>
+            <span class="title">«American Crew»</span>
+          </a>
+        </figure>
+        <section class="product-price">
+          <span class="price">300 руб.</span>
+          <a class="btn" href="#">Купить</a>
+        </section>
+      </article>
 
-        <div class="goods-nav">
-          <ul>
-            <li><a class="btn" href="#">1</a></li>
-            <li><a class="btn goods-nav-active" href="#">2</a></li>
-            <li><a class="btn" href="#">3</a></li>
-            <li><a class="btn" href="#">4</a></li>
-          </ul>
-        </div>
-      </div>
+      <article class="goods-item">
+        <figure class="goods-item-photo">
+          <img src="#" alt="Набор для бритья «Baxter of California»" width="180" height="120">
+          <a href="#">
+            <span class="category">Набор для бритья</span><br>
+            <span class="title">«Baxter of California»</span>
+          </a>
+        </figure>
+        <section class="product-price">
+          <span class="price">3 900 руб.</span>
+          <a class="btn" href="#">Купить</a>
+        </section>
+      </article>
+
+      <ul class="goods-nav">
+        <li><a class="btn" href="#">1</a></li>
+        <li><a class="btn goods-nav-active" href="#">2</a></li>
+        <li><a class="btn" href="#">3</a></li>
+        <li><a class="btn" href="#">4</a></li>
+      </ul>
     </div>
   </main>
 

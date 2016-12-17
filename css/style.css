@@ -1,10 +1,12 @@
 html,
 body {
   min-width: 1122px;
-  min-height: 1750px;
+  min-height: 1150px;
   margin: 0;
   padding: 0;
 }
+
+/************** Общие стили для всех страниц **************/
 
 .clearfix {
   content: "";
@@ -34,6 +36,32 @@ body {
   min-height: 70px;
 }
 
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin-top: 65px;
+}
+
+.footer-contacts {
+  float: left;
+  width: 320px;
+  min-height: 90px;
+  margin-right: 60px;
+}
+
+.footer-social {
+  float: left;
+  width: 180px;
+  min-height: 90px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 180px;
+  min-height: 90px;
+}
+
+/************** Сетка главной страницы **************/
 .index-logo {
   width: 368px;
   height: 204px;
@@ -74,27 +102,25 @@ body {
   min-height: 330px;
 }
 
-.main-footer {
+/************** Сетка текстовой страницы **************/
+.price-index-content {
   padding-top: 60px;
-  padding-bottom: 40px;
-  margin-top: 65px;
+  padding-bottom: 80px;
 }
 
-.footer-contacts {
+.price-index-left {
   float: left;
-  width: 320px;
-  min-height: 90px;
-  margin-right: 60px;
+  width: 380px;
+  min-height: 88px;
+  margin-right: 100px;
 }
 
-.footer-social {
-  float: left;
-  width: 180px;
-  min-height: 90px;
-}
-
-.footer-copyright {
+.price-index-right {
   float: right;
-  width: 180px;
-  min-height: 90px;
+  width: 460px;
+  min-height: 88px;
+}
+
+.price-footer {
+  margin-top: 0;
 }

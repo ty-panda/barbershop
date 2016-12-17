@@ -143,3 +143,42 @@ body {
   width: 390px;
   min-height: 510px;
 }
+
+/************** Сетка страницы магазина **************/
+.sort-and-catalog {
+  padding-top: 54px;
+  padding-bottom: 49px;
+}
+
+.sorting {
+  float: left;
+  width: 220px;
+  min-height: 595px;
+  margin-right: 20px;
+}
+
+.goods {
+  float: right;
+  width: 700px;
+  min-height: 595px;
+  font-size: 0;
+}
+
+.goods-item {
+  display: inline-block;
+  width: 220px;
+  height: 286px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.goods-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.goods-nav {
+  margin-top: 45px;
+  font-size: 14px;
+}

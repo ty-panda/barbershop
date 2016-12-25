@@ -12,6 +12,11 @@ body {
   background: #000 url(../img/body-bg.jpg) no-repeat center top;
 }
 
+.index-page {
+  color: #000;
+  background: #f8f5f2 url(../img/white-pattern.jpg);
+}
+
 /************** Общие стили для всех страниц **************/
 
 .clearfix::after {
@@ -107,6 +112,61 @@ body {
 .login:hover::before {
   opacity: 1;
 }
+
+.current-page h1 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.current-page .bread-crumbs {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.bread-crumbs li {
+  position: relative;
+
+  display: inline;
+  padding-right: 40px;
+}
+
+.bread-crumbs li a {
+  color: #000;
+
+  text-decoration: none;
+}
+
+.bread-crumbs li a:hover {
+  text-decoration: underline;
+}
+
+.bread-crumbs li::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  right: 0;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-right: 13px;
+
+  background: #000;
+
+  transform: rotate(45deg);
+}
+
+.bread-crumbs .bread-crumbs-active a {
+  color: #aba9a7;
+}
+
+.bread-crumbs .bread-crumbs-active::after {
+  background: none;
+}
+
 
 .main-footer {
   padding-top: 60px;
@@ -446,14 +506,13 @@ body {
 /************** Сетка страницы товара **************/
 .good {
   padding-top: 57px;
-  padding-bottom: 49px;
+  padding-bottom: 50px;
 }
 
 .good-gallery {
   float: left;
   width: 460px;
   min-height: 668px;
-  margin-right: 90px;
 }
 
 .good-price-and-desc {
@@ -499,4 +558,108 @@ body {
 .goods-nav {
   margin-top: 45px;
   font-size: 14px;
+}
+
+/************** Декоративные элементы страницы товара **************/
+.header-logo {
+  width: 111px;
+  height: 24px;
+  font-size: 0;
+  background: url(../img/header-logo.png) no-repeat center 22px;
+}
+
+.main-navigation .header-logo:hover {
+  background: url(../img/header-logo.png) no-repeat center 22px;
+}
+
+.good-gallery .full-photo {
+  width: 460px;
+  height: 498px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.good-gallery .good-gallery-content {
+  width: 460px;
+  height: 149px;
+  margin: 0;
+  mar
+}
+
+.good-gallery-content img {
+  width: 140px;
+  height: 149px;
+  margin-right: 17px;
+}
+
+.good-gallery-content img:last-child {
+  margin-right: 0;
+}
+
+.good-price-and-desc {
+  padding-top: 24px;
+}
+
+.good-avail {
+  margin-right: 176px;
+}
+
+.good-code {
+  color: #aeaeae;
+}
+
+.good-desc p {
+  margin: 0;
+  padding: 20px 0 40px 0;
+}
+
+.good-price {
+  margin-bottom: 62px;
+}
+
+.good-price .price {
+  display: inline-block;
+  margin-right: -3px;
+  padding: 10px 26px 10px 30px;
+
+  background: #e5e5e5;
+  vertical-align: middle;
+}
+
+.good-price .btn {
+  padding-left: 20px;
+  padding-right: 17px;
+}
+
+.good-compos b {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.good-compos ul {
+  position: relative;
+
+  margin: 0;
+  margin-top: 26px;
+  padding: 0;
+  padding-left: 22px;
+
+  list-style: none;
+}
+
+.good-compos ul li::before {
+  content: "";
+
+  position: absolute;
+  left: 2px;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-top: 8px;
+
+
+  background: #000;
+
+  transform: rotate(45deg);
 }

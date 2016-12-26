@@ -17,8 +17,10 @@ body {
   background: #f8f5f2 url(../img/white-pattern.jpg);
 }
 
-/************** Общие стили для всех страниц **************/
-
+/** ===========================
+ *  Общие стили для всех страниц
+ *  ===========================
+*/
 .clearfix::after {
   content: "";
   display: table;
@@ -268,7 +270,10 @@ body {
   margin-top: 0;
 }
 
-/************** Сетка главной страницы **************/
+/** ===========================
+ *  Сетка главной страницы
+ *  ===========================
+*/
 .index-logo {
   width: 368px;
   height: 204px;
@@ -484,7 +489,10 @@ body {
   width: 100%;
 }
 
-/************** Сетка текстовой страницы **************/
+/** ===========================
+ *  Сетка текстовой страницы
+ *  ===========================
+*/
 .price-index-content {
   padding-top: 60px;
   padding-bottom: 80px;
@@ -503,7 +511,10 @@ body {
   min-height: 88px;
 }
 
-/************** Сетка страницы товара **************/
+/** ===========================
+ *  Сетка страницы товара
+ *  ===========================
+*/
 .good {
   padding-top: 57px;
   padding-bottom: 50px;
@@ -521,7 +532,10 @@ body {
   min-height: 510px;
 }
 
-/************** Сетка страницы магазина **************/
+/** ===========================
+ *  Сетка страницы магазина
+ *  ===========================
+*/
 .sort-and-catalog {
   padding-top: 54px;
   padding-bottom: 49px;
@@ -530,14 +544,11 @@ body {
 .sorting {
   float: left;
   width: 220px;
-  min-height: 595px;
-  margin-right: 20px;
 }
 
 .goods {
   float: right;
   width: 700px;
-  min-height: 595px;
   font-size: 0;
 }
 
@@ -555,12 +566,35 @@ body {
   margin-right: 0;
 }
 
-.goods-nav {
+.paginator {
   margin-top: 45px;
   font-size: 14px;
 }
 
-/************** Декоративные элементы страницы товара **************/
+.paginator .btn {
+  display: inline-block;
+  min-width: 7px;
+  margin-right: 7px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.paginator-active {
+  color: #000;
+
+  background: #fff;
+}
+
+.paginator .btn:hover {
+  color: #fff;
+
+  background: #663d15;
+}
+
+/** ===========================
+ *  Декоративные элементы страницы товара
+ *  ===========================
+*/
 .header-logo {
   width: 111px;
   height: 24px;
@@ -663,3 +697,177 @@ body {
 
   transform: rotate(45deg);
 }
+
+/** ===========================
+ *  Декоративные элементы магазина
+ *  ===========================
+*/
+
+/************** Оформление формы сортировки товара **************/
+/*Сброс отступов и рамок fieldset*/
+.sorting-form fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+  /*Форматирование заголовков формы*/
+  .sorting-form legend {
+    margin-bottom: 28px;
+
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  /*Сброс стилей списков и установка отступов*/
+  .sorting-form ul {
+    margin-top: 0;
+    margin-bottom: 52px;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  /*Задаем отступ до кнопки отправки формы*/
+  .sorting-form .product-groups {
+    margin-bottom: 17px;
+  }
+
+  /*Задаем позишн для элементов списка и отступы*/
+  .sorting-form ul li {
+    position: relative;
+
+    margin-bottom: 17px;
+    padding-left: 20px;
+  }
+
+  /*Скрываем стандартные элементы формы*/
+  .sorting-form input[type="checkbox"],
+  .sorting-form input[type="radio"] {
+      display:none;
+  }
+
+  /*Делаем label блочным и задаем отступ от формы*/
+  .sorting-form input[type="checkbox"] + label,
+  .sorting-form input[type="radio"] + label {
+    display: block;
+    margin-left: 23px;
+  }
+
+  /*Создаем псведоэлемент для checkbox, позиционируем его и вешаем на фон спрайт*/
+  .sorting-form input[type="checkbox"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    margin-right: 23px;
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../img/form-sprite.png);
+    background-repeat: no-repeat;
+    border: 2px solid #000;
+  }
+
+  /*Утсанавливаем фон спрайта для пустого chekbox*/
+  .sorting-form input[type="checkbox"] + label::before {
+    background-position: 20px 2px;
+  }
+
+  /*Устанавливаем фон спрайта для checked checkbox*/
+  .sorting-form input[type="checkbox"]:checked + label::before {
+    background-position: 2px 2px;
+  }
+
+  /*Создаем псведоэлемент для radio, позиционируем его и вешаем на фон спрайт*/
+  .sorting-form input[type="radio"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    margin-right: 23px;
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../img/form-sprite.png);
+    background-repeat: no-repeat;
+    border: 2px solid #000;
+    border-radius: 50%;
+  }
+
+  /*Устанавливаем фон спрайта для пустого radio*/
+  .sorting-form input[type="radio"] + label::before {
+    background-position: 20px 2px;
+  }
+
+  /*Устанавливаем фон спрайта для checked radio*/
+  .sorting-form input[type="radio"]:checked + label::before {
+    background-position: -22px 2px;
+  }
+
+/************** Оформление каталога товаров **************/
+/*Сброс отступов у картинок каталога*/
+.goods-item {
+  box-shadow: 0 5px 16px 3px rgba(0,1,1,.2);
+}
+
+.goods-item .goods-item-photo {
+  margin: 0;
+  padding: 0;
+}
+
+/*Задаем явный размер картинкам*/
+.goods-item-photo img {
+  width: 220px;
+  height: 165px;
+}
+
+/*Форматируем ссылку на товар*/
+.price-and-name > a {
+  display: block;
+
+  color: #000;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+  /*Установка отступов для цены*/
+  .price-and-name .good-price {
+    margin: 0;
+    margin-top: 12px;
+  }
+
+  /*Сброс внешних отступов у кнопки купить в каталоге*/
+  .price-and-name .btn {
+    margin: 0;
+  }
+
+  /*Сбрасываем прописные буквы у категории товара*/
+  .price-and-name .category {
+    text-transform: none;
+  }
+
+  .price-and-name .category:hover {
+    text-decoration: underline;
+  }
+
+  /*Явно задаем прописные буквы для названия товара*/
+  .price-and-name .title {
+    text-transform: uppercase;
+  }
+
+  .price-and-name .title:hover {
+    text-decoration: underline;
+  }
+
+  /*Задаем фон и внутренние отступы для блока с именем товара и ценой*/
+  .goods-item .price-and-name {
+    padding: 15px;
+
+    background: #fff;
+  }

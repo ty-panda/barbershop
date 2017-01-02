@@ -419,6 +419,11 @@ body {
   margin-right: 0;
 }
 
+.footer-copyright .btn:hover {
+  color: #000;
+  background: #fff;
+}
+
 .second-footer {
   margin-top: 0;
 }
@@ -1143,6 +1148,33 @@ body {
     background-position: 2px 2px;
   }
 
+  /*Состояние disabled делаем серым*/
+  .sorting-form input[type="checkbox"]:disabled + label::before,
+  .sorting-form input[type="radio"]:disabled + label::before {
+    opacity: .3;
+    background-position: 20px 2px;
+  }
+
+  .sorting-form input[type="checkbox"]:checked:disabled + label::before {
+    opacity: .3;
+    background-position: 2px 2px;
+  }
+
+  /*Текст пунка при disabled делаем серым*/
+  .sorting-form input[type="checkbox"]:disabled + label,
+  .sorting-form input[type="radio"]:disabled + label {
+    color: #adaba9;
+  }
+
+  .sorting-form input[type="checkbox"] + label:hover,
+  .sorting-form input[type="checkbox"]:checked + label:hover,
+  .sorting-form input[type="checkbox"]:disabled + label:hover,
+  .sorting-form input[type="radio"] + label:hover,
+  .sorting-form input[type="radio"]:checked + label:hover,
+  .sorting-form input[type="radio"]:disabled + label:hover {
+    color: #663d15;
+  }
+
   /*Создаем псведоэлемент для radio, позиционируем его и вешаем на фон спрайт*/
   .sorting-form input[type="radio"] + label::before {
     content: "";
@@ -1168,6 +1200,11 @@ body {
 
   /*Устанавливаем фон спрайта для checked radio*/
   .sorting-form input[type="radio"]:checked + label::before {
+    background-position: -22px 2px;
+  }
+
+  .sorting-form input[type="radio"]:checked:disabled + label::before {
+    opacity: .3;
     background-position: -22px 2px;
   }
 
